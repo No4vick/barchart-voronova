@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barchart.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <SplitPane dividerPositions="0.5">
+      <items>
+          <BarChart fx:id="barChartAvgAdd" prefHeight="540" prefWidth="960" title="Times Compared Average, Adds">
+            <xAxis>
+                <CategoryAxis label="Number of elements" prefHeight="40.0" prefWidth="1162.0" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Time" side="LEFT" />
+            </yAxis>
+              <cursor>
+                <Cursor fx:constant="CROSSHAIR" />
+              </cursor>
+          </BarChart>
+         <BarChart fx:id="barChartAvgRemove" layoutX="10.0" layoutY="10.0" prefHeight="540" prefWidth="960" title="Times Compared Average, Removes">
+            <xAxis>
+               <CategoryAxis label="Number of elements" prefHeight="40.0" prefWidth="1162.0" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+               <NumberAxis label="Time" side="LEFT" />
+            </yAxis>
+            <cursor>
+               <Cursor fx:constant="CROSSHAIR" />
+            </cursor>
+         </BarChart>
+      </items>
+   </SplitPane>
+   <SplitPane dividerPositions="0.5">
+      <items>
+         <BarChart fx:id="barChartTotalAdd" prefHeight="540" prefWidth="960" title="Times Compared Total, Adds">
+            <xAxis>
+               <CategoryAxis label="Number of elements" prefHeight="40.0" prefWidth="1162.0" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+               <NumberAxis label="Time" side="LEFT" />
+            </yAxis>
+            <cursor>
+               <Cursor fx:constant="CROSSHAIR" />
+            </cursor>
+         </BarChart>
+         <BarChart fx:id="barChartTotalRemove" layoutX="10.0" layoutY="10.0" prefHeight="540" prefWidth="960" title="Times Compared Total, Removes">
+            <xAxis>
+               <CategoryAxis label="Number of elements" prefHeight="40.0" prefWidth="1162.0" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+               <NumberAxis label="Time" side="LEFT" />
+            </yAxis>
+            <cursor>
+               <Cursor fx:constant="CROSSHAIR" />
+            </cursor>
+         </BarChart>
+      </items>
+   </SplitPane>
+</VBox>
